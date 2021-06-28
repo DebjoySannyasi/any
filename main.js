@@ -1,22 +1,9 @@
-name_student_array=[];
-function submit()
-{
-    var name_1=document.getElementById("student1").value;
-    var name_2=document.getElementById("student2").value;
-    var name_3=document.getElementById("student3").value;
-    var name_4=document.getElementById("student4").value;
-    name_student_array.push(name_1);
-    name_student_array.push(name_2);
-    name_student_array.push(name_3);
-    name_student_array.push(name_4);
-    console.log(name_student_array);
-    document.getElementById("display_name").innerHTML=name_student_array;
-    document.getElementById("submit_button").style.display="none";
-    document.getElementById("sort_button").style.display="inline-block";
-}
-function sorting()
-{
-    name_student_array.sort();
-    console.log(name_student_array);
-    document.getElementById("display_name").innerHTML=name_student_array;
+function addUser(){
+    player1_name = document.getElementById("player1_name_input").Value;
+    player2_name = document.getElementById("player2_name_input").Value;
+
+      localStorage.setItem("player1_name", player1_name);
+      localStorage.setItem("player2_name", player2_name);
+
+      window.location = "game_page.html";
 }
